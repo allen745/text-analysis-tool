@@ -1,0 +1,30 @@
+====================================================
+        WORD AND TEXT ANALYSIS REPORT
+====================================================
+Generated : 2026-10-21 05:27:24
+Source    : Typed text
+
+TEXT STATISTICS
+----------------------------------------------------
+Characters (with spaces) : 33
+Words                    : 6
+Sentences                : 2
+Unique words             : 4
+Most frequent word(s)    : is, python  (tied)
+Highest frequency        : 2
+
+WORD FREQUENCY (all words)
+----------------------------------------------------
+Word    Count
+------  -----
+is      2
+python  2
+easy    1
+useful  1
+
+WORDS SEARCHED THIS SESSION
+----------------------------------------------------
+python : 2
+java : 0
+
+====================================================

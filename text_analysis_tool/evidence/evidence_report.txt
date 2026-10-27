@@ -1,0 +1,400 @@
+WORD AND TEXT ANALYSIS TOOL - TEST EVIDENCE
+CVM University | Course 102040306 | Project P10
+Generated : 2026-10-21 05:27:24
+Python    : 3.12.3 on Linux
+
+OVERALL: ALL PASSED  (5/5 assignment cases, 63/63 automated tests)
+
+========================================================================
+SECTION F - MINIMUM TEST CASES (from the assignment sheet)
+========================================================================
+
+Test 1: Sample paragraph
+  Input    : Python is easy. Python is useful.
+  Expected : 6 words, 2 sentences; Python and is tied at 2
+  Actual   : 6 words, 2 sentences; is and python tied at 2
+  Result   : PASS
+
+Test 2: Mixed case
+  Input    : PYTHON python Python
+  Expected : Frequency python = 3
+  Actual   : Frequency python = 3
+  Result   : PASS
+
+Test 3: Punctuation
+  Input    : Hello, hello!
+  Expected : Frequency hello = 2
+  Actual   : Frequency hello = 2
+  Result   : PASS
+
+Test 4: Empty text
+  Input    : (empty input)
+  Expected : Counts 0; no crash
+  Actual   : chars 0, words 0, sentences 0, unique 0; no crash
+  Result   : PASS
+
+Test 5: Missing file
+  Input    : Nonexistent path
+  Expected : Error handled; menu remains usable
+  Actual   : handled: "File not found: /tmp/definitely_not_here_12345.txt"
+  Result   : PASS
+
+
+========================================================================
+SECTION E - SAMPLE RUN: recorded menu session
+========================================================================
+
+Welcome to the Word and Text Analysis Tool.
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 1
+Type or paste your text. Press Enter on an empty line to finish.
+(Finishing straight away analyses empty text: all counts are 0.)
+> Python is easy. Python is useful.
+> 
+
+Text loaded (Typed text).
+Characters (with spaces) : 33
+Words                    : 6
+Sentences                : 2
+Unique words             : 4
+Most frequent word(s)    : is, python  (tied)
+Highest frequency        : 2
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 3
+
+Characters (with spaces) : 33
+Words                    : 6
+Sentences                : 2
+Unique words             : 4
+Most frequent word(s)    : is, python  (tied)
+Highest frequency        : 2
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 4
+
+Word    Count
+------  -----
+is      2
+python  2
+easy    1
+useful  1
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 5
+Enter the word to search for: python
+'python' appears 2 time(s).
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 5
+Enter the word to search for: java
+'java' appears 0 time(s).
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 6
+Report saved to: /tmp/tmphyc_0ne9/analysis_report.txt
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 7
+Goodbye!
+
+========================================================================
+MISSING FILE: error is shown and the menu stays usable
+========================================================================
+
+Welcome to the Word and Text Analysis Tool.
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 2
+Enter the path of the text file: /tmp/tmphyc_0ne9/nonexistent.txt
+Error: File not found: /tmp/tmphyc_0ne9/nonexistent.txt
+Returning to the menu.
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 1
+Type or paste your text. Press Enter on an empty line to finish.
+(Finishing straight away analyses empty text: all counts are 0.)
+> Hello, hello!
+> 
+
+Text loaded (Typed text).
+Characters (with spaces) : 13
+Words                    : 2
+Sentences                : 1
+Unique words             : 1
+Most frequent word(s)    : hello
+Highest frequency        : 2
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 5
+Enter the word to search for: hello
+'hello' appears 2 time(s).
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 7
+Goodbye!
+
+========================================================================
+EMPTY TEXT: counts are zero and nothing crashes
+========================================================================
+
+Welcome to the Word and Text Analysis Tool.
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 1
+Type or paste your text. Press Enter on an empty line to finish.
+(Finishing straight away analyses empty text: all counts are 0.)
+> 
+
+The text is empty, so every count is zero.
+Characters (with spaces) : 0
+Words                    : 0
+Sentences                : 0
+Unique words             : 0
+Most frequent word(s)    : None (no words found)
+Highest frequency        : 0
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 3
+
+Characters (with spaces) : 0
+Words                    : 0
+Sentences                : 0
+Unique words             : 0
+Most frequent word(s)    : None (no words found)
+Highest frequency        : 0
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 5
+Enter the word to search for: anything
+'anything' appears 0 time(s).
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 6
+Report saved to: /tmp/tmphyc_0ne9/analysis_report.txt
+
+==== Word and Text Analysis Tool ====
+  1. Input text
+  2. Read text file
+  3. Show text statistics
+  4. Show word frequency
+  5. Search for a word
+  6. Save summary to analysis_report.txt
+  7. Exit
+Choose an option (1-7): 7
+Goodbye!
+
+========================================================================
+SAVED FILE: contents of analysis_report.txt from the sample run
+========================================================================
+
+====================================================
+        WORD AND TEXT ANALYSIS REPORT
+====================================================
+Generated : 2026-10-21 05:27:24
+Source    : Typed text
+
+TEXT STATISTICS
+----------------------------------------------------
+Characters (with spaces) : 33
+Words                    : 6
+Sentences                : 2
+Unique words             : 4
+Most frequent word(s)    : is, python  (tied)
+Highest frequency        : 2
+
+WORD FREQUENCY (all words)
+----------------------------------------------------
+Word    Count
+------  -----
+is      2
+python  2
+easy    1
+useful  1
+
+WORDS SEARCHED THIS SESSION
+----------------------------------------------------
+python : 2
+java : 0
+
+====================================================
+
+
+========================================================================
+AUTOMATED TEST SUITE (python -m unittest, verbose)
+========================================================================
+
+test_empty_text (tests.test_analyzer.AssignmentMinimumTestCases.test_empty_text) ... ok
+test_mixed_case (tests.test_analyzer.AssignmentMinimumTestCases.test_mixed_case) ... ok
+test_punctuation (tests.test_analyzer.AssignmentMinimumTestCases.test_punctuation) ... ok
+test_sample_paragraph (tests.test_analyzer.AssignmentMinimumTestCases.test_sample_paragraph) ... ok
+test_includes_spaces (tests.test_analyzer.CharacterCount.test_includes_spaces) ... ok
+test_trailing_newline_is_not_counted (tests.test_analyzer.CharacterCount.test_trailing_newline_is_not_counted) ... ok
+test_windows_line_endings_match_unix (tests.test_analyzer.CharacterCount.test_windows_line_endings_match_unix) ... ok
+test_empty (tests.test_analyzer.MostFrequent.test_empty) ... ok
+test_single_winner (tests.test_analyzer.MostFrequent.test_single_winner) ... ok
+test_sort_order (tests.test_analyzer.MostFrequent.test_sort_order) ... ok
+test_three_way_tie_is_alphabetical (tests.test_analyzer.MostFrequent.test_three_way_tie_is_alphabetical) ... ok
+test_multi_line_paragraph (tests.test_analyzer.RealisticParagraph.test_multi_line_paragraph) ... ok
+test_absent_word_is_zero (tests.test_analyzer.SearchWord.test_absent_word_is_zero) ... ok
+test_blank_term_rejected (tests.test_analyzer.SearchWord.test_blank_term_rejected) ... ok
+test_case_insensitive (tests.test_analyzer.SearchWord.test_case_insensitive) ... ok
+test_multi_word_term_rejected (tests.test_analyzer.SearchWord.test_multi_word_term_rejected) ... ok
+test_search_in_empty_text_is_zero (tests.test_analyzer.SearchWord.test_search_in_empty_text_is_zero) ... ok
+test_term_with_punctuation (tests.test_analyzer.SearchWord.test_term_with_punctuation) ... ok
+test_decimal_point_is_not_a_boundary (tests.test_analyzer.SentenceCounting.test_decimal_point_is_not_a_boundary) ... ok
+test_empty (tests.test_analyzer.SentenceCounting.test_empty) ... ok
+test_period_question_exclamation (tests.test_analyzer.SentenceCounting.test_period_question_exclamation) ... ok
+test_repeated_terminators_are_one_boundary (tests.test_analyzer.SentenceCounting.test_repeated_terminators_are_one_boundary) ... ok
+test_sentences_across_lines (tests.test_analyzer.SentenceCounting.test_sentences_across_lines) ... ok
+test_stray_terminators_count_for_nothing (tests.test_analyzer.SentenceCounting.test_stray_terminators_count_for_nothing) ... ok
+test_text_without_terminator_is_one_sentence (tests.test_analyzer.SentenceCounting.test_text_without_terminator_is_one_sentence) ... ok
+test_curly_quotes_removed (tests.test_analyzer.WordExtraction.test_curly_quotes_removed) ... ok
+test_ellipsis_between_words (tests.test_analyzer.WordExtraction.test_ellipsis_between_words) ... ok
+test_em_dash_separates_words (tests.test_analyzer.WordExtraction.test_em_dash_separates_words) ... ok
+test_extra_whitespace_and_newlines (tests.test_analyzer.WordExtraction.test_extra_whitespace_and_newlines) ... ok
+test_keeps_hyphenated_word_together (tests.test_analyzer.WordExtraction.test_keeps_hyphenated_word_together) ... ok
+test_keeps_internal_apostrophe (tests.test_analyzer.WordExtraction.test_keeps_internal_apostrophe) ... ok
+test_lone_punctuation_is_not_a_word (tests.test_analyzer.WordExtraction.test_lone_punctuation_is_not_a_word) ... ok
+test_lowercases_and_strips_punctuation (tests.test_analyzer.WordExtraction.test_lowercases_and_strips_punctuation) ... ok
+test_numbers_are_words (tests.test_analyzer.WordExtraction.test_numbers_are_words) ... ok
+test_actions_before_loading_text (tests.test_cli.TestEdgeCases.test_actions_before_loading_text) ... ok
+test_bad_search_terms (tests.test_cli.TestEdgeCases.test_bad_search_terms) ... ok
+test_closed_input_exits_cleanly (tests.test_cli.TestEdgeCases.test_closed_input_exits_cleanly) ... ok
+test_empty_text_reports_zeros (tests.test_cli.TestEdgeCases.test_empty_text_reports_zeros) ... ok
+test_invalid_menu_choices (tests.test_cli.TestEdgeCases.test_invalid_menu_choices) ... ok
+test_loading_new_text_clears_old_searches (tests.test_cli.TestEdgeCases.test_loading_new_text_clears_old_searches) ... ok
+test_menu_stays_usable_after_missing_file (tests.test_cli.TestEdgeCases.test_menu_stays_usable_after_missing_file) ... ok
+test_missing_file_returns_to_menu (tests.test_cli.TestEdgeCases.test_missing_file_returns_to_menu) ... ok
+test_multi_line_input (tests.test_cli.TestEdgeCases.test_multi_line_input) ... ok
+test_save_failure_is_reported_not_raised (tests.test_cli.TestEdgeCases.test_save_failure_is_reported_not_raised) ... ok
+test_frequency_table_option (tests.test_cli.TestHappyPath.test_frequency_table_option) ... ok
+test_read_file_mode (tests.test_cli.TestHappyPath.test_read_file_mode) ... ok
+test_sample_paragraph_full_session (tests.test_cli.TestHappyPath.test_sample_paragraph_full_session) ... ok
+test_saved_report_contents (tests.test_cli.TestHappyPath.test_saved_report_contents) ... ok
+test_strips_quotes_and_spaces (tests.test_fileio.TestCleanPath.test_strips_quotes_and_spaces) ... ok
+test_blank_path_rejected (tests.test_fileio.TestReadTextFile.test_blank_path_rejected) ... ok
+test_empty_file_is_valid (tests.test_fileio.TestReadTextFile.test_empty_file_is_valid) ... ok
+test_folder_instead_of_file (tests.test_fileio.TestReadTextFile.test_folder_instead_of_file) ... ok
+test_missing_file_raises_friendly_error (tests.test_fileio.TestReadTextFile.test_missing_file_raises_friendly_error) ... ok
+test_non_text_file_raises_friendly_error (tests.test_fileio.TestReadTextFile.test_non_text_file_raises_friendly_error) ... ok
+test_quoted_path_from_drag_and_drop (tests.test_fileio.TestReadTextFile.test_quoted_path_from_drag_and_drop) ... ok
+test_reads_a_normal_file (tests.test_fileio.TestReadTextFile.test_reads_a_normal_file) ... ok
+test_unicode_text_round_trip (tests.test_fileio.TestReadTextFile.test_unicode_text_round_trip) ... ok
+test_utf8_bom_is_removed (tests.test_fileio.TestReadTextFile.test_utf8_bom_is_removed) ... ok
+test_no_temp_file_left_behind (tests.test_fileio.TestSaveReport.test_no_temp_file_left_behind) ... ok
+test_overwrites_existing_report (tests.test_fileio.TestSaveReport.test_overwrites_existing_report) ... ok
+test_unwritable_location_raises_friendly_error (tests.test_fileio.TestSaveReport.test_unwritable_location_raises_friendly_error) ... ok
+test_writes_content_and_returns_absolute_path (tests.test_fileio.TestSaveReport.test_writes_content_and_returns_absolute_path) ... ok
+test_writes_unicode (tests.test_fileio.TestSaveReport.test_writes_unicode) ... ok
+
+----------------------------------------------------------------------
+Ran 63 tests in 0.013s
+
+OK
